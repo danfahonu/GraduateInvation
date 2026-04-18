@@ -30,9 +30,9 @@
                 shimmerPhase: Math.random() * Math.PI * 2,
                 shimmerSpeed: Math.random() * 0.02 + 0.005,
                 // Gold color variations
-                hue: 40 + Math.random() * 15, // 40-55 (gold range)
+                hue: 40 + Math.random() * 10, // 40-50 (gold range)
                 sat: 60 + Math.random() * 30,
-                light: 45 + Math.random() * 25
+                light: 30 + Math.random() * 20 // 30-50 for slightly darker gold to show on white
             });
         }
     }
@@ -50,8 +50,8 @@
 
             // Opacity breathing
             p.o += p.oSpeed * p.oDir;
-            if (p.o >= 0.35) p.oDir = -1;
-            if (p.o <= 0.03) p.oDir = 1;
+            if (p.o >= 0.6) p.oDir = -1;
+            if (p.o <= 0.08) p.oDir = 1;
 
             // Wrap around edges
             if (p.y > H + 10) { p.y = -10; p.x = Math.random() * W; }

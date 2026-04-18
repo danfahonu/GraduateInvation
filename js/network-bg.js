@@ -73,11 +73,11 @@
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
                 if (dist < CONNECTION_DIST) {
-                    const alpha = (1 - dist / CONNECTION_DIST) * 0.06;
+                    const alpha = (1 - dist / CONNECTION_DIST) * 0.12;
                     ctx.beginPath();
                     ctx.moveTo(nodes[i].x, nodes[i].y);
                     ctx.lineTo(nodes[j].x, nodes[j].y);
-                    ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
+                    ctx.strokeStyle = `rgba(184, 134, 11, ${alpha})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
@@ -86,18 +86,18 @@
 
         // Draw nodes
         nodes.forEach(n => {
-            const pulseO = Math.sin(n.pulse) * 0.03 + n.baseO;
+            const pulseO = Math.sin(n.pulse) * 0.05 + n.baseO * 1.5;
 
             // Node dot
             ctx.beginPath();
             ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(212, 175, 55, ${pulseO})`;
+            ctx.fillStyle = `rgba(184, 134, 11, ${pulseO})`;
             ctx.fill();
 
             // Subtle glow
             ctx.beginPath();
             ctx.arc(n.x, n.y, n.r * 4, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(212, 175, 55, ${pulseO * 0.15})`;
+            ctx.fillStyle = `rgba(184, 134, 11, ${pulseO * 0.25})`;
             ctx.fill();
         });
 

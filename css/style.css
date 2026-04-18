@@ -8,21 +8,21 @@
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Inter', -apple-system, sans-serif;
 
-    --bg: #1a1a1a;
-    --bg-card: rgba(22, 22, 22, 0.92);
+    --bg: #fcfbf8;
+    --bg-card: rgba(255, 255, 255, 0.95);
 
-    --gold: #d4af37;
-    --gold-light: #e8c962;
-    --gold-dim: rgba(212, 175, 55, 0.12);
-    --gold-border: rgba(212, 175, 55, 0.22);
-    --gold-border-hover: rgba(212, 175, 55, 0.5);
-    --gold-glow: rgba(212, 175, 55, 0.3);
+    --gold: #b8860b;
+    --gold-light: #c5a059;
+    --gold-dim: rgba(184, 134, 11, 0.12);
+    --gold-border: rgba(184, 134, 11, 0.3);
+    --gold-border-hover: rgba(184, 134, 11, 0.6);
+    --gold-glow: rgba(184, 134, 11, 0.15);
 
-    --ivory: #faf8f0;
-    --text: #f0ece2;
-    --text2: #b8b2a4;
+    --ivory: #ffffff;
+    --text: #2c2824;
+    --text2: #5c574e;
     --text3: #8a8478;
-    --text4: #5c574e;
+    --text4: #b8b2a4;
 
     --ease: cubic-bezier(0.25, 1, 0.5, 1);
     --spring: cubic-bezier(0.175, 0.885, 0.32, 1.15);
@@ -600,13 +600,32 @@ main {
     font-style: italic;
 }
 
+.map-wrap {
+    margin-top: 1.5rem;
+    border: 1px solid var(--gold-border);
+    padding: 0.4rem;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.notice-map {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+.notice-map:hover {
+    opacity: 1;
+}
+
 /* ============================================
    INTRO / ENVELOPE — Dark Gold
    ============================================ */
 #intro {
     position: fixed; inset: 0; z-index: 9999;
     display: flex; align-items: center; justify-content: center;
-    background: rgba(10, 10, 10, 0.88);
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
     cursor: pointer;
     transition: opacity 1.2s var(--ease), visibility 1.2s, backdrop-filter 1.2s;
@@ -625,19 +644,19 @@ main {
 
 .env-back {
     position: absolute; inset: 0;
-    background: linear-gradient(160deg, #2a2520, #1c1916);
+    background: linear-gradient(160deg, #fdfbf7, #f4ecd8);
     border-radius: 6px; z-index: 1;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(184, 134, 11, 0.3);
 }
 /* Cover layer — hides the white letter behind front+flap */
 .env-cover {
     position: absolute; inset: 0;
-    background: linear-gradient(160deg, #2a2520, #1c1916);
+    background: linear-gradient(160deg, #fdfbf7, #f4ecd8);
     border-radius: 6px; z-index: 3;
 }
 .env-front {
     position: absolute; bottom: 0; left: 0; width: 100%; height: 66%;
-    background: linear-gradient(160deg, #302a22, #261f1a);
+    background: linear-gradient(160deg, #fdfaf5, #eee3ca);
     border-radius: 0 0 6px 6px; z-index: 4;
     clip-path: polygon(0 30%, 50% 0, 100% 30%, 100% 100%, 0 100%);
 }
@@ -646,11 +665,11 @@ main {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     height: 1px;
-    background: rgba(212, 175, 55, 0.15);
+    background: rgba(184, 134, 11, 0.2);
 }
 .env-flap {
     position: absolute; top: 0; left: 0; width: 100%; height: 55%;
-    background: linear-gradient(180deg, #352e26, #2a2420);
+    background: linear-gradient(180deg, #fcf8f0, #eaddbf);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     transform-origin: top center; z-index: 5;
     transition: transform 0.7s var(--spring);
@@ -660,7 +679,7 @@ main {
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 1px;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(184, 134, 11, 0.3);
 }
 .env-letter {
     position: absolute; left: 8%; bottom: 10%; width: 84%; height: 72%;
