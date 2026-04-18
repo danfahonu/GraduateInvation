@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎓 Thiệp Mời Tốt Nghiệp | Đặng Phạm Hồng Nhung</title>
+    <meta name="description" content="Thiệp mời lễ tốt nghiệp Đặng Phạm Hồng Nhung - ĐH Tài chính - Marketing. 22/04/2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="no-scroll">
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/audio/bg-music.mp3#t=183" type="audio/mpeg">
+    </audio>
+
+    <!-- Scroll progress -->
+    <div class="scroll-bar" id="scroll-bar"></div>
+
+    <!-- Music toggle -->
+    <button id="music-btn" class="music-btn" aria-label="Toggle music">
+        <span class="m-bars"><span></span><span></span><span></span><span></span></span>
+    </button>
+
+    <!-- Confetti -->
+    <div id="confetti-box"></div>
+
+    <!-- ===== INTRO ===== -->
+    <div id="intro">
+        <canvas id="intro-canvas"></canvas>
+        <div class="intro-inner">
+            <div class="envelope" id="envelope">
+                <div class="env-back"></div>
+                <div class="env-letter">
+                    <div class="letter-body">
+                        <span class="letter-emoji">🎓</span>
+                        <p class="letter-main">For You</p>
+                        <p class="letter-sub">Một lời mời đặc biệt</p>
+                    </div>
+                </div>
+                <div class="env-cover"></div>
+                <div class="env-front"></div>
+                <div class="env-flap"></div>
+                <div class="env-seal"><span>✦</span></div>
+            </div>
+            <p class="intro-hint">Chạm vào thư để mở</p>
+        </div>
+    </div>
+
+    <!-- ===== MAIN ===== -->
+    <main id="main" style="display:none">
+        <!-- Background canvases -->
+        <canvas id="network-bg"></canvas>
+        <canvas id="golden-dust"></canvas>
+
+        <!-- ===== HERO INVITATION CARD ===== -->
+        <section class="invitation-card anim-card">
+            <span class="corner-ornament corner-tl"></span>
+            <span class="corner-ornament corner-tr"></span>
+            <span class="corner-ornament corner-bl"></span>
+            <span class="corner-ornament corner-br"></span>
+
+            <!-- Graduation Cap SVG -->
+            <div class="grad-cap-wrap">
+                <svg class="grad-cap-svg" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Cap board -->
+                    <polygon points="60,8 115,32 60,56 5,32" fill="#2a2520" stroke="#d4af37" stroke-width="0.8"/>
+                    <!-- Cap base -->
+                    <path d="M30,38 L30,58 Q60,75 90,58 L90,38 L60,52 L30,38Z" fill="#1c1916" stroke="#d4af37" stroke-width="0.5" opacity="0.9"/>
+                    <!-- Tassel string -->
+                    <line x1="60" y1="32" x2="98" y2="32" stroke="#d4af37" stroke-width="1"/>
+                    <!-- Tassel -->
+                    <circle cx="98" cy="32" r="2.5" fill="#d4af37"/>
+                    <rect x="96" y="34" width="4" height="14" rx="1.5" fill="#d4af37"/>
+                    <path d="M95,48 L98,52 L101,48" stroke="#d4af37" stroke-width="1" fill="none" stroke-linecap="round"/>
+                    <!-- Button on top -->
+                    <circle cx="60" cy="32" r="3" fill="#d4af37" opacity="0.8"/>
+                </svg>
+            </div>
+
+            <p class="invite-label">Trân trọng kính mời</p>
+            <p class="invite-sublabel">đến dự buổi lễ</p>
+
+            <h1 class="invite-title">
+                <span class="invite-title-line1">Tốt Nghiệp</span>
+                <span class="invite-title-ampersand">&</span>
+                <span class="invite-title-line2">Trao Bằng</span>
+            </h1>
+
+            <div class="invite-divider">
+                <span class="inv-line"></span>
+                <span class="inv-diamond">◆</span>
+                <span class="inv-line"></span>
+            </div>
+
+            <p class="invite-honor">vinh danh</p>
+
+            <!-- Avatar -->
+            <div class="av-wrap">
+                <div class="av-ring">
+                    <div class="av-inner">
+                        <img src="assets/img/avatar.jpg" alt="Đặng Phạm Hồng Nhung" class="av-photo">
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="invite-name">Đặng Phạm Hồng Nhung</h2>
+
+            <div class="invite-divider invite-divider-sm">
+                <span class="inv-line"></span>
+                <span class="inv-diamond">◆</span>
+                <span class="inv-line"></span>
+            </div>
+
+            <p class="invite-school">Trường Đại học Tài chính - Marketing</p>
+            <p class="invite-school-en">University of Finance - Marketing</p>
+            <p class="invite-major">Ngành: Hệ thống Thông tin Quản lý</p>
+        </section>
+
+        <!-- ELEGANT DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond">◆</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- ===== COUNTDOWN ===== -->
+        <section class="invitation-card anim-card">
+            <span class="corner-ornament corner-tl"></span>
+            <span class="corner-ornament corner-tr"></span>
+            <span class="corner-ornament corner-bl"></span>
+            <span class="corner-ornament corner-br"></span>
+
+            <h2 class="section-title">Đếm Ngược</h2>
+            <p class="section-subtitle">đến ngày trọng đại</p>
+            <div class="cd-date">Thứ Tư, 22 tháng 4, 2026 · 15:30 — 17:00</div>
+            <div class="cd-row">
+                <div class="cd-cell">
+                    <div class="cd-box">
+                        <span id="cd-d" class="cd-val">00</span>
+                    </div>
+                    <span class="cd-lbl">Ngày</span>
+                </div>
+                <span class="cd-colon">:</span>
+                <div class="cd-cell">
+                    <div class="cd-box">
+                        <span id="cd-h" class="cd-val">00</span>
+                    </div>
+                    <span class="cd-lbl">Giờ</span>
+                </div>
+                <span class="cd-colon">:</span>
+                <div class="cd-cell">
+                    <div class="cd-box">
+                        <span id="cd-m" class="cd-val">00</span>
+                    </div>
+                    <span class="cd-lbl">Phút</span>
+                </div>
+                <span class="cd-colon">:</span>
+                <div class="cd-cell">
+                    <div class="cd-box">
+                        <span id="cd-s" class="cd-val">00</span>
+                    </div>
+                    <span class="cd-lbl">Giây</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ELEGANT DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond">◆</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- ===== VENUE / MEET ===== -->
+        <section class="invitation-card anim-card">
+            <span class="corner-ornament corner-tl"></span>
+            <span class="corner-ornament corner-tr"></span>
+            <span class="corner-ornament corner-bl"></span>
+            <span class="corner-ornament corner-br"></span>
+
+            <h2 class="section-title">Thời Gian & Địa Điểm</h2>
+
+            <div class="venue-block">
+                <div class="venue-icon">◆</div>
+                <p class="venue-main"><strong>15:30 — 17:00 · Thứ Tư, 22/04/2026</strong></p>
+                <p class="venue-note">Sau phần lễ chính, gia đình và bạn bè có thể nán lại cùng Nhung chung vui và lưu giữ những khoảnh khắc kỷ niệm.</p>
+            </div>
+
+            <div class="venue-block">
+                <div class="venue-icon">◆</div>
+                <p class="venue-label">Địa Điểm</p>
+                <a href="https://maps.app.goo.gl/UogMMWC2kCQkYiE4A" target="_blank" rel="noopener" class="venue-address">
+                    Trường ĐH Tài chính - Marketing<br>(Cơ sở Long Trường)
+                </a>
+            </div>
+
+            <div class="venue-block">
+                <div class="venue-icon">◆</div>
+                <p class="venue-label">Liên Hệ</p>
+                <a href="tel:0962916648" class="venue-address">Nhung — 0962 916 648</a>
+            </div>
+
+            <a href="https://maps.app.goo.gl/UogMMWC2kCQkYiE4A" target="_blank" rel="noopener" class="btn-map" id="btn-map">
+                Xem Bản Đồ
+            </a>
+        </section>
+
+        <!-- ELEGANT DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond">◆</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- ===== LỜI NHẮN ===== -->
+        <section class="invitation-card anim-card">
+            <span class="corner-ornament corner-tl"></span>
+            <span class="corner-ornament corner-tr"></span>
+            <span class="corner-ornament corner-bl"></span>
+            <span class="corner-ornament corner-br"></span>
+
+            <h2 class="section-title">Lời Nhắn</h2>
+            <div class="note-content">
+                <p>Khi đến nơi, quý khách và bạn bè vui lòng liên hệ qua số điện thoại để Nhung có thể trực tiếp đón tiếp.</p>
+                <a href="tel:0962916648" class="note-phone">0962 916 648</a>
+                <p class="note-subtle">Vì không gian buổi lễ có thể khá đông đúc, vui lòng lưu ý giữ gìn tư trang cá nhân.</p>
+            </div>
+            <div class="note-divider"></div>
+            <div class="note-heartfelt">
+                <p>Sự hiện diện của gia đình và bạn bè là niềm vinh hạnh và là món quà ý nghĩa nhất đối với Nhung trong ngày đặc biệt này.</p>
+                <p class="note-closing">Rất mong được đón tiếp mọi người!</p>
+            </div>
+        </section>
+
+        <!-- ELEGANT DIVIDER -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond">◆</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- ===== AN NINH & GỬI XE ===== -->
+        <section class="invitation-card anim-card">
+            <span class="corner-ornament corner-tl"></span>
+            <span class="corner-ornament corner-tr"></span>
+            <span class="corner-ornament corner-bl"></span>
+            <span class="corner-ornament corner-br"></span>
+
+            <h2 class="section-title">Lưu Ý Quan Trọng</h2>
+            <p class="section-subtitle">◆</p>
+
+            <div class="notice-content">
+                <p class="notice-intro">Để đảm bảo an ninh và sự thuận tiện trong quá trình diễn ra buổi lễ, nhà trường có một số lưu ý:</p>
+                <ul class="notice-list">
+                    <li>Vui lòng đỗ xe tại bãi giữ xe khu vực <strong>Ký túc xá (KTX)</strong> của trường để tránh ùn tắc tại cổng chính.</li>
+                    <li>Tuyệt đối <strong>tuân thủ sự hướng dẫn</strong> của đội ngũ bảo vệ và lực lượng thanh niên xung kích tại các điểm nút giao thông.</li>
+                </ul>
+            </div>
+            <div class="notice-footer">
+                <p>Sự hợp tác của quý khách và các bạn sẽ góp phần giúp buổi lễ diễn ra trọn vẹn và ý nghĩa nhất. Xin chân thành cảm ơn!</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="f-ornament">✦ ✦ ✦</div>
+            <p>Trân trọng</p>
+            <p class="f-sub">Class of 2026</p>
+        </footer>
+    </main>
+
+    <script src="js/network-bg.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
